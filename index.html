@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Travel</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Travel</h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="images/bg-video.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Never Stop </h2>
+            <h3>Exploring The World</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            <a href="#">Explore</a>
+        </div>
+        <!-- <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul> -->
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog -->
+    <div class="heading-container">
+        <div class="heading">
+            <h3><span>Latest </span>Blogs</h3>
+        </div>
+    </div>
+    <div class="blog-container">
+        <div class="card">
+            <img src="images/blog1.jpg" alt="">
+            <div class="content">
+                <h2>Traveling</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/blog2.jpg" alt="">
+            <div class="content">
+                <h2>Traveling</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/blog3.jpg" alt="">
+            <div class="content">
+                <h2>Traveling</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="btn-view-all">
+        <a href="#">View All</a>
+    </div>
+
+    <!-- Photography -->
+    <section class="secondary_bg">
+        <div class="heading-container">
+            <div class="heading">
+                <h3><span>Photography </span>Gallery</h3>
+            </div>
+        </div>
+        <div class="full-img" id="fullImgBox">
+            <img src="images/travel1.jpg" id="fullImg" alt="" srcset="">
+            <span onclick="closeImg()">X</span>
+        </div>
+        <div class="img-gallery">
+            <img src="images/travel1.jpg" onclick="openImg(this)" alt="" srcset="">
+            <img src="images/travel2.jpg" onclick="openImg(this)" alt="" srcset="">
+            <img src="images/travel3.jpg" onclick="openImg(this)" alt="" srcset="">
+            <img src="images/travel3.jpg" onclick="openImg(this)" alt="" srcset="">
+            <img src="images/travel5.jpg" onclick="openImg(this)" alt="" srcset="">
+            <img src="images/travel6.jpg" onclick="openImg(this)" alt="" srcset="">
+        </div>
+        <div class="btn-view-all">
+            <a href="#">View All</a>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <div class="heading-container">
+        <div class="heading">
+            <h3><span>What have I </span>Accomplished?</h3>
+        </div>
+    </div>
+    <div class="container bg">
+        <div class="bg1">
+            <h2>78 <span>| 195</span></h2>
+            <p>Countries Explored</p>
+        </div>
+        <div class="bg1">
+            <h2><i class="fas fa-map-marker-alt"></i></h2>
+            <p>150 Cities Visited</p>
+        </div>
+        <div class="bg2">
+            <h2>20618 <span>Miles Travelled <i class="fas fa-running"></i></span></h2>
+        </div>
+        <div class="bg1">
+            <h2>25 &deg;C</h2>
+            <p>Average Temperature in Paradise</p>
+        </div>
+        <div class="bg1">
+            <h2><i class="fas fa-bed"></i></h2>
+            <p>250 Nights Spent Abroad</p>
+        </div>
+        <div class="bg2">
+            <h2>124 <span>Cultural Experiences Captured</span></h2>
+        </div>
+        <div class="bg1">
+            <h2>170 <span>lbs</span></h2>
+            <p>Weight of Memories Carried</p>
+        </div>
+        <div class="bg1">
+            <h2>38 <span>%</span></h2>
+            <p>Adventures Embarked Upon</p>
+        </div>
+        <div class="bg2">
+            <h2>118 <span>mg/dl</span></h2>
+            <p>Adrenaline Rush Moments</p>
+        </div>
+        <div class="bg2">
+            <h2>680 <span>kcal</span></h2>
+            <p>Energy Burned Climbing Mountains</p>
+        </div>
+        <div class="bg2">
+            <h2><i class="fas fa-camera"></i></h2>
+            <p>Memories Captured: 3000</p>
+        </div>
+        <div class="bg2">
+            <h2>85 <span>%</span></h2>
+            <p>Spiritual Enlightenment Achieved</p>
+        </div>
+    </div>
+
+    <!-- Ribbon -->
+    <div class="ribbon">
+        <div class="ribbon-content">
+            <h2>Let's Connect</h2>
+            <p>Have questions or just want to say hello? Feel free to reach out!</p>
+            <a href="#" class="btn-contact">Contact</a>
+        </div>
+    </div>    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </div>
+            <div class="footer_width link">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Get in Touch! </h2>
+                <ul>
+                    <li><i class="fas fa-envelope"></i>
+                        <a href="mailto:examplemail@example.com">examplemail@example.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>&copy; 2024 Travel. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
