@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Travel - Contact</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="secondary-header">
+        <h2 class="secondary-logo">Travel</h2>
+        <nav class="secondary-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact -->
+    <div class="contact-container">
+        <form method="post" class="contact-left" id="form">
+            <div class="contact-left-title">
+                <h2>Get in Touch!</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="4eb05775-c116-4932-8059-4e47dcdbb2f2">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <input type="text" name="subject" placeholder="Subject" class="contact-inputs" required>
+            <textarea name="message" cols="30" rows="10" placeholder="Message" class="contact-inputs"
+                required></textarea>
+            <button type="submit" class="contact-btn">Submit <i class="fa-solid fa-arrow-right"></i></button>
+            <div id="result"></div>
+        </form>
+        <div class="contact-right">
+            <img src="images/contact.png" alt="" srcset="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About</h2>
+                <p>Welcome to my travel blog, where we embark on journeys to uncover the world's hidden gems and explore
+                    the beauty of diverse cultures. From remote wilderness destinations to bustling city streets, we
+                    share our adventures, insights, and tips to inspire fellow wanderers to wander off the beaten path
+                    and embrace the magic of exploration.</p>
+            </div>
+            <div class="footer_width link">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Get in Touch! </h2>
+                <ul>
+                    <li><i class="fas fa-envelope"></i>
+                        <a href="mailto:swaqarhussain450@gmail.com">swaqarhussain450@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>&copy; 2024 Travel. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Form submitted successfully";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 3000);
+                });
+        });
+    </script>
+</body>
+
+</html>

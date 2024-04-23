@@ -7,7 +7,6 @@ menuToggle.addEventListener('click', () => {
   showcase.classList.toggle('active');
 })
 
-
 //Gallery
 var fullImgBox = document.getElementById("fullImgBox");
 var fullImg = document.getElementById("fullImg");
